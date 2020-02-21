@@ -14,7 +14,7 @@ const styGrid = {
     flexWrap: 'wrap',
     padding: '1rem',
 }
-const stripe_url = 'https://api.stripe.com/'
+const stripe_url = 'https://api.stripe.com'
 
 const Skius = class extends React.Component {
     constructor(props) {
@@ -37,7 +37,7 @@ const Skius = class extends React.Component {
         }).then(response => {
             return response.json()
         }).then(json => {
-
+            console.log(json.data);
             this.setState({
                 fetchedData: json.data,
 
