@@ -32,7 +32,13 @@ const Skius = class extends React.Component {
     getProducts() {
         fetch(stripe_url + "/v1/skus", {
             method: "GET",
-            headers: { 'Authorization': `Bearer ${process.env.STRIPE_SECRET_KEY}` }
+            headers: { 
+                'Host':'api.stripe.com',
+                'Accept':'*/*',
+                'Cache-Control':'no-cache',
+                'Connection': 'keep-alive',
+                'Authorization': 'Bearer rk_test_JJHhLwRtCbX0el0C0h6L1FK300g2MhcrPX' 
+            }
         }).then(response => {
             return response.json()
         }).then(json => {
