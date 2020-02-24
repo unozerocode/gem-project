@@ -54,7 +54,7 @@ export default function StickyFooter() {
 
                     <div className="col-sm-12 col-lg-6 text-center">
                         <Typography className="col-12" variant="body1">Deserunt tempor ullamco do commodo officia.</Typography>
-                        <Box display={{ xs: 'none', sm: 'none', md: 'none', lg: 'block' }} m={1}>
+                        <Box m={1}>
                             <span className="material-icons pr-1"><Face /></span>
                             <span className="material-icons pr-1"><Insta /></span>
                             <span className="material-icons pr-1"><Twi /></span>
