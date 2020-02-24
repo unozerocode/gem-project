@@ -1,13 +1,19 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import Video from "../components/video"
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <section>
+      <h1>NOT FOUND</h1>
+      <p>You just hit a page that doesn't exist... the sadness.</p>
+      <p>May I suggest a video instead?</p>
+      <Video
+        videoSrcURL="https://www.youtube.com/embed/zV2J1esiQM8"
+        videoTitle="Official Music Video on YouTube"
+      />
+    </section>
   </Layout>
 )
-
 export default NotFoundPage
