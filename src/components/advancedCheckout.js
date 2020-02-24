@@ -7,7 +7,7 @@ const Checkout = class extends React.Component {
   // You can find your key in the Dashboard:
   // https://dashboard.stripe.com/account/apikeys
   componentDidMount() {
-    this.stripe = window.Stripe(process.env.stripe_p_key, {
+    this.stripe = window.Stripe(process.env.STRIPE_P_KEY, {
       betas: ['checkout_beta_4'],
     })
   }
@@ -16,8 +16,8 @@ const Checkout = class extends React.Component {
     event.preventDefault()
     const { error } = await this.stripe.redirectToCheckout({
       items: this.props.cart,
-      successUrl: `https://${process.env.gatsby_api_url}/page-2/`,
-      cancelUrl: `https://${process.env.gatsby_api_url}/advanced/`,
+      successUrl: `https://${process.env.GATSBY_API_URL}/page-2/`,
+      cancelUrl: `https://${process.env.GATSBY_API_URL}/advanced/`,
     })
 
     if (error) {

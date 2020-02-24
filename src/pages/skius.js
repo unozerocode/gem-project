@@ -30,7 +30,7 @@ const Skius = class extends React.Component {
     }
 
     getProducts() {
-        console.log(process.env.stripe_s_key);
+        console.log(process.env.STRIPE_S_KEY);
         fetch(stripe_url + "/v1/skus", {
             method: "GET",
             headers: { 
@@ -38,7 +38,7 @@ const Skius = class extends React.Component {
                 'Accept':'*/*',
                 'Cache-Control':'no-cache',
                 'Connection': 'keep-alive',
-                'Authorization': `Bearer ${process.env.stripe_s_key}`
+                'Authorization': `Bearer ${process.env.STRIPE_S_KEY}`
             }
         }).then(response => {
             return response.json()
