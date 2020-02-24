@@ -37,7 +37,7 @@ const Skius = class extends React.Component {
                 'Accept':'*/*',
                 'Cache-Control':'no-cache',
                 'Connection': 'keep-alive',
-                'Authorization': `Bearer ${process.env.STRIPE_SECRET_KEY}`
+                'Authorization': `Bearer ${process.env.STRIPE_S_KEY}`
             }
         }).then(response => {
             return response.json()
