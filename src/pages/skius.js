@@ -30,6 +30,7 @@ const Skius = class extends React.Component {
     }
 
     getProducts() {
+        console.log(process.env.STRIPE_S_KEY);
         fetch(stripe_url + "/v1/skus", {
             method: "GET",
             headers: { 

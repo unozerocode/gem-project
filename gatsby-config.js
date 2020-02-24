@@ -2,7 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 console.log("tipo:"+process.env.NODE_ENV);
-console.log(process.env);
+console.log(process.env.STRIPE_S_KEY);
 module.exports = {
   siteMetadata: {
     title: `gem-project`,
