@@ -9,15 +9,15 @@ import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Skius from './skius';
 
-/* import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import FiestaImg from "../images/gatsby-happy.jpg" */
+ import { useStaticQuery, graphql } from "gatsby"
+// import Img from "gatsby-image"
+// import FiestaImg from "../images/gatsby-happy.jpg" 
 
 
 const IndexPage = () => {
-  /*   const data = useStaticQuery(graphql`
+   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-happy.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "gatsby-uni.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920) {
             ...GatsbyImageSharpFluid
@@ -25,12 +25,12 @@ const IndexPage = () => {
         }
       }
     }
-  `) */
+  `) 
 
   return (
     <Layout>
       <SEO title="Home" />
-      <section className="swiper-container swiper-slider" style={{ zIndex: `1`, backgroundImage: `url(gatsby-uni.jpg)`, backgroundRepeat: `no-repeat`, backgroundSize: `cover`, backgroundPosition: `center bottom`, maxHeight: `35rem`, height: `25rem`, display: `flex`, alignItems: `center` }}>
+      <section className="swiper-container swiper-slider" style={{ zIndex: `1`, backgroundImage: `url(${data.placeholderImage.childImageSharp.fluid.src})`, backgroundRepeat: `no-repeat`, backgroundSize: `cover`, backgroundPosition: `center bottom`, maxHeight: `35rem`, height: `25rem`, display: `flex`, alignItems: `center` }}>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 text-center">
