@@ -1,6 +1,6 @@
 {
     "env":{
-        "STRIPE_S_KEY": "@stripe_s_key",
-        "STRIPE_P_KEY": "@stripe_p_key"
+        "GATSBY_STRIPE_S_KEY": "@GATSBY_STRIPE_S_KEY",
+        "GATSBY_STRIPE_P_KEY": "@GATSBY_STRIPE_P_KEY"
     }
 }

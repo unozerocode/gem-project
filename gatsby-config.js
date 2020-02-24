@@ -2,7 +2,9 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 console.log("tipo:"+process.env.NODE_ENV);
-console.log(process.env.STRIPE_S_KEY);
+console.log("URL:"+ process.env.GATSBY_API_URL);
+console.log("S:"+process.env.GATSBY_STRIPE_S_KEY);
+console.log("P:"+process.env.GATSBY_STRIPE_P_KEY);
 module.exports = {
   siteMetadata: {
     title: `gem-project`,
@@ -69,7 +71,7 @@ module.exports = {
       resolve: `gatsby-source-stripe`,
       options: {
         objects: ["Sku"],
-        secretKey: process.env.STRIPE_S_KEY,
+        secretKey: process.env.GATSBY_STRIPE_S_KEY,
         downloadFiles: true,
       },
     },
