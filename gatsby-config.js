@@ -2,7 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 console.log("tipo:"+process.env.NODE_ENV);
-console.log(process.env.STRIPE_S_KEY);
+console.log(process.env.stripe_s_key);
 module.exports = {
   siteMetadata: {
     title: `gem-project`,
@@ -69,7 +69,7 @@ module.exports = {
       resolve: `gatsby-source-stripe`,
       options: {
         objects: ["Sku"],
-        secretKey: process.env.STRIPE_S_KEY,
+        secretKey: process.env.stripe_s_key,
         downloadFiles: true,
       },
     },
