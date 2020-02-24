@@ -1,6 +1,7 @@
 {
     "env":{
-        "GATSBY_STRIPE_S_KEY": "@GATSBY_STRIPE_S_KEY",
-        "GATSBY_STRIPE_P_KEY": "@GATSBY_STRIPE_P_KEY"
+        "GATSBY_STRIPE_S_KEY": "@gatsby_stripe_s_key",
+        "GATSBY_STRIPE_P_KEY": "@gatsby_stripe_p_key",
+        "GATSBY_API_URL": "@gatsby_api_url"
     }
 }
