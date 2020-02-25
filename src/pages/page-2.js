@@ -50,7 +50,7 @@ const SecondPage = () => {
     return (
       <Layout>
         <SEO title="Payment Success" />
-        <Container component="section" maxWidth={false} className={`section-80 section-md-top-70 bg-white ${classes.stripeStyle}`}>
+        <Container component="section" maxWidth={false} className={`section-80 section-md-top-70 ${classes.stripeStyle}`}>
           <Container component="div" maxWidth="md">
             <Box p={2} display="block" justifyContent="center">
               <form>
