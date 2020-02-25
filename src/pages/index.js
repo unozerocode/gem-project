@@ -8,14 +8,11 @@ import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Skius from './skius';
-
- import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
-// import FiestaImg from "../images/gatsby-happy.jpg" 
+import { useStaticQuery, graphql } from "gatsby"
 
 
 const IndexPage = () => {
-   const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "gatsby-uni.jpg" }) {
         childImageSharp {
@@ -25,7 +22,7 @@ const IndexPage = () => {
         }
       }
     }
-  `) 
+  `)
 
   return (
     <Layout>
@@ -43,29 +40,24 @@ const IndexPage = () => {
       </section>
 
       <Container component="section" maxWidth={false} className="section-80 section-md-top-70 bg-white">
-        <Container component="div" maxWidth="lg">
-          <Box p={2} display="block" justifyContent="center">
-            hola
-       <Button variant="contained" className="btn btn-primary">
-              Go to advanced
-       <span className="material-icons">arrow_forward</span>
-            </Button>
-            <h1>Hi people</h1>
-            <p>Welcome to your new Gatsby site.</p>
-            <p>Now go build something great.</p>
-            <button type="button" className="btn btn-primary">Primary</button>
+        <Container component="div" maxWidth="lg" className="container">
+          <Box p={2} display="block" justifyContent="center" className="row">
 
-            <Checkout />
-            <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-              <Image src="gatsby-astronaut.png" />
-
+            <div>
+              <h1>Hi people</h1>
+              <p>Welcome to your new Gatsby site.</p>
+              <p>Now go build something great.</p>
+              <Checkout />
             </div>
-            <Link to="/advanced/" style={{ textDecoration: `none` }}>
-              <Button variant="contained" >
-                Go to advanced
-               <span className="material-icons">arrow_forward</span>
-              </Button>
-            </Link>
+
+
+            <div>
+              <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+                <Image src="gatsby-astronaut.png" />
+
+              </div>
+            </div>
+
           </Box>
         </Container>
       </Container>
@@ -75,13 +67,13 @@ const IndexPage = () => {
         </Container>
       </Container>
       <Container component="section" maxWidth={false} className="section-80 section-md-bottom-70 bg-white">
-        <Container component="div" maxWidth="lg"  className="shell">
-        <div className="range range-xs-center range-xs-middle">
-              <div className="cell-md-10 cell-lg-8 text-center text-md-right">
-                <h2 className="text-bold">See Our Special Promo Offers</h2>
-              </div>
-              <div className="cell-lg-3 offset-top-30 offset-lg-top-0 text-lg-left"><a href="single-tour.html" className="btn btn-primary">Get Started</a></div>
+        <Container component="div" maxWidth="lg" className="shell">
+          <div className="range range-xs-center range-xs-middle">
+            <div className="cell-md-10 cell-lg-8 text-center text-md-right">
+              <h2 className="text-bold">See Our Special Promo Offers</h2>
             </div>
+            <div className="cell-lg-3 offset-top-30 offset-lg-top-0 text-lg-left"><a href="single-tour.html" className="btn btn-primary">Get Started</a></div>
+          </div>
         </Container>
       </Container>
     </Layout>

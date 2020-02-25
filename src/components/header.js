@@ -94,8 +94,8 @@ const Header = ({ siteTitle, menuLinks }) => {
       <Divider />
       <List className="pt-3">
         {menuLinks.map(link => (
-          <Link style={{ textDecoration: "none" }} to={link.link}>
-          <ListItem button key={link.name} style={{ background: `whitesmoke`, width: `96%` }} className="m-1 shadow-sm p-3 bg-white rounded">
+          <Link key={link.name} style={{ textDecoration: "none" }} to={link.link}>
+          <ListItem button  style={{ background: `whitesmoke`, width: `96%` }} className="m-1 shadow-sm p-3 bg-white rounded">
             
               {link.name}
           
