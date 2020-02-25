@@ -25,7 +25,7 @@ const stylesStripe = makeStyles(theme => ({
       '&::placeholder': {
         color: '#aab7c4'
       },
-    '&:focus': {  boxShadow: '0 1px 3px 0 #cfd7df',outline: `none` },
+    '&:focus': {  boxShadow: '0 0px 3px  #93CEFF',outline: `none` },
   },
   stripeButton:{
     display:'inline-block',
