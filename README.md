@@ -16,5 +16,8 @@
 
     ```shell
     cd gem-project/
+
+    npm install
+
     gatsby develop
     ```
