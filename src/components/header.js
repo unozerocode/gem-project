@@ -170,16 +170,16 @@ const Header = ({ siteTitle, menuLinks }) => {
                   },
                 }}
               >
-                <MenuItem onClick={handleClose}>
+                <MenuItem>
                 <span className="material-icons pr-3"><Face /></span>Facebook
                 </MenuItem>
-                <MenuItem onClick={handleClose}>
+                <MenuItem>
                 <span className="material-icons pr-3"><Insta /></span>Instagram
                 </MenuItem>
-                <MenuItem onClick={handleClose}>
+                <MenuItem>
                 <span className="material-icons pr-3"><Twi /></span>Twitter
                 </MenuItem>
-                <MenuItem onClick={handleClose}>
+                <MenuItem>
                 <span className="material-icons pr-3"><What /></span>WhatsApp
                 </MenuItem>
               </Menu>
