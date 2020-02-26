@@ -1,7 +1,7 @@
 {
   "name": "gem-project",
   "private": false,
-  "description": "Gem Project",
+  "description": "Gem Project ",
   "version": "0.1.0",
   "dependencies": {
     "@material-ui/core": "^4.9.1",
