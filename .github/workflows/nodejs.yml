@@ -22,3 +22,5 @@ jobs:
     - run: npm test
       env:
         CI: true
+        GATSBY_STRIPE_S_KEY: ${{ secrets.GATSBY_STRIPE_S_KEY }}
+        GATSBY_STRIPE_P_KEY: ${{ secrets.GATSBY_STRIPE_P_KEY }}
