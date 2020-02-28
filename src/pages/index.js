@@ -66,7 +66,7 @@ const IndexPage = () => {
         </div>
 
       </Container>
-      <Container component="section" maxWidth={false} className="section-80 section-md-bottom-70 bg-wild-wand">
+      <Container component="section" maxWidth={false} className="section-50 section-md-bottom-50 bg-wild-wand">
       <div className="container">
           <div className="row justify-content-between">
             <div className="cell-md-10 cell-lg-8 text-center text-md-right">
