@@ -80,7 +80,7 @@ const Skius = class extends React.Component {
             <Grid style={conatinerStyles}>
                 {this.state.loading ? (
                     fetchedData.map(sku =>
-                        <Grid item key={sku.id} xs={6} sm={4} style={styGrid}>
+                        <Grid item key={sku.id} xs={12} sm={4} style={styGrid}>
 
                             <SkuCard {...props} sku={sku} />
 
