@@ -29,10 +29,7 @@ const Video = class extends React.Component {
       <Box pt={0.5}>
         <Skeleton variant="text" />
         <Skeleton variant="circle" width={40} height={40} />
-        <Skeleton variant="rect"  style={{
-        height: "100%",
-        width: "100%"
-      }}/>
+        <Skeleton variant="rect"  height={120} />
       </Box>
       )
     }
