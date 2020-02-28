@@ -63,7 +63,7 @@ const Skius = class extends React.Component {
 
 
         for (let i = 0; i < 3; i++) {
-            table.push(<Grid item key={i} xs={12} sm={4} style={styGrid}>
+            table.push(<Grid item key={i} xs={12} sm={6} md={4} style={styGrid}>
                 <Box pt={0.5}>
                     <Skeleton variant="text"  />
                     <Skeleton variant="circle" width={40} height={40} />
@@ -80,7 +80,7 @@ const Skius = class extends React.Component {
             <Grid style={conatinerStyles}>
                 {this.state.loading ? (
                     fetchedData.map(sku =>
-                        <Grid item key={sku.id} xs={12} sm={4} style={styGrid}>
+                        <Grid item key={sku.id} xs={12} sm={6} md={4} style={styGrid}>
 
                             <SkuCard {...props} sku={sku} />
 
