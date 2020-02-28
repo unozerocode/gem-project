@@ -13,6 +13,7 @@ const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "gatsby-uni.jpg" }) {
+        publicURL
         childImageSharp {
           fluid(maxWidth: 1920) {
             ...GatsbyImageSharpFluid
@@ -37,6 +38,12 @@ const IndexPage = () => {
         </div>
       </section>
 
+      <Container component="section" maxWidth={false} className="section-70 section-md-bottom-80 bg-wild-wand">
+        <Container component="div" maxWidth="lg" >
+          <Skius />
+        </Container>
+      </Container>
+      
       <Container component="section" maxWidth={false} className="section-80 section-md-top-70 bg-white">
         <Container component="div" maxWidth="lg" className="container">
           <Box p={2} display="block" justifyContent="center" className="row">
@@ -57,11 +64,6 @@ const IndexPage = () => {
             </div>
 
           </Box>
-        </Container>
-      </Container>
-      <Container component="section" maxWidth={false} className="section-70 section-md-bottom-80 bg-wild-wand">
-        <Container component="div" maxWidth="lg" >
-          <Skius />
         </Container>
       </Container>
       <Container component="section" maxWidth={false} className="section-80 section-md-bottom-70 bg-white">

@@ -28,7 +28,9 @@ const Skius = class extends React.Component {
 
     componentDidMount() {
         this.getProducts();
+     
     }
+
 
     getProducts() {
         fetch(stripe_url + "/v1/skus", {
