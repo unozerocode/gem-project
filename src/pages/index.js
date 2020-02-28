@@ -45,10 +45,10 @@ const IndexPage = () => {
       </Container>
       
       <Container component="section" maxWidth={false} className="section-80 section-md-top-70 bg-white">
-        <Container component="div" maxWidth="lg" className="container">
-          <Box p={2} display="block" justifyContent="center" className="row">
 
-            <div>
+        <div className="container">
+          <div className="row justify-content-center">
+          <div className="col-lg-6 text-center">
               <h1>Hi people</h1>
               <p>Welcome to your new Gatsby site.</p>
               <p>Now go build something great.</p>
@@ -56,25 +56,25 @@ const IndexPage = () => {
             </div>
 
 
-            <div>
+            <div className="col-lg-6 text-center">
               <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
                 <Image src="gatsby-astronaut.png" />
 
               </div>
             </div>
+          </div>
+        </div>
 
-          </Box>
-        </Container>
       </Container>
-      <Container component="section" maxWidth={false} className="section-80 section-md-bottom-70 bg-white">
-        <Container component="div" maxWidth="lg" className="shell">
-          <div className="range range-xs-center range-xs-middle">
+      <Container component="section" maxWidth={false} className="section-80 section-md-bottom-70 bg-wild-wand">
+      <div className="container">
+          <div className="row justify-content-between">
             <div className="cell-md-10 cell-lg-8 text-center text-md-right">
               <h2 className="text-bold">See Our Special Promo Offers</h2>
             </div>
             <div className="cell-lg-3 offset-top-30 offset-lg-top-0 text-lg-left"><a href="single-tour.html" className="btn btn-primary">Get Started</a></div>
           </div>
-        </Container>
+        </div>
       </Container>
     </Layout>
   )
