@@ -38,13 +38,13 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <Container component="section" maxWidth={false} className="section-70 section-md-bottom-80 bg-wild-wand">
+      <Container component="section" maxWidth={false} className="section-50 section-md-bottom-50 bg-wild-wand">
         <Container component="div" maxWidth="lg" >
           <Skius />
         </Container>
       </Container>
       
-      <Container component="section" maxWidth={false} className="section-80 section-md-top-70 bg-white">
+      <Container component="section" maxWidth={false} className="section-50 section-md-top-50 bg-white">
 
         <div className="container">
           <div className="row justify-content-center">
@@ -66,7 +66,7 @@ const IndexPage = () => {
         </div>
 
       </Container>
-      <Container component="section" maxWidth={false} className="section-80 section-md-bottom-70 bg-wild-wand">
+      <Container component="section" maxWidth={false} className="section-50 section-md-bottom-50 bg-wild-wand">
       <div className="container">
           <div className="row justify-content-between">
             <div className="cell-md-10 cell-lg-8 text-center text-md-right">
