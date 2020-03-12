@@ -55,14 +55,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-stripe",
-    {
-      resolve: `gatsby-source-stripe`,
-      options: {
-        objects: ["Sku"],
-        secretKey: process.env.GATSBY_STRIPE_S_KEY,
-        downloadFiles: true,
-      },
-    },
 
   ],
 }
