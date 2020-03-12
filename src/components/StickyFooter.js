@@ -14,12 +14,16 @@ import Insta from '@material-ui/icons/Instagram'
 function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Your Website
-      </Link>{' '}
+            
             {new Date().getFullYear()}
-            {'.'}
+            {'. '}
+            {'Copyright © '}
+           
+                Two Fish Travel. All rights reserved.
+      {' '}
+      <Link color="inherit" href="https://material-ui.com/">
+                Developed by UnoZero Code SA de CV.
+      </Link>
         </Typography>
     );
 }

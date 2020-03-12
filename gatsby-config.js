@@ -12,20 +12,12 @@ module.exports = {
         link: '/'
       },
       {
-        name: 'Page2',
-        link: '/page-2'
+        name: 'About Us',
+        link: '/about-us'
       },
       {
-        name: 'Advanced',
-        link: '/advanced'
-      },
-      {
-        name: 'Error',
-        link: '/404'
-      },
-      {
-        name: 'Productos',
-        link: '/skius'
+        name: 'Contact US',
+        link: '/contact-us'
       },
     ],
   },

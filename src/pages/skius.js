@@ -7,7 +7,7 @@ const conatinerStyles = {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     padding: '1rem 0 1rem 0',
 }
 const styGrid = {
@@ -20,9 +20,11 @@ const Skius = class extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            loading: false,
+            loadingP: false,
+            loadingS:false,
             error: false,
             fetchedData: [],
+            fetchedMetadata:[]
         }
     }
 
@@ -48,16 +50,40 @@ const Skius = class extends React.Component {
 
             this.setState({
                 fetchedData: json.data,
-
             })
+            console.log(json.data);
             if (this.state.fetchedData.length > 0) {
 
-                this.setState({ loading: true });
+                this.setState({ loadingS: true });
+            }
+            return json;
+        })
+        fetch(stripe_url + "/v1/products", {
+            method: "GET",
+            headers: {
+                'Host': 'api.stripe.com',
+                'Accept': '*/*',
+                'Cache-Control': 'no-cache',
+                'Connection': 'keep-alive',
+                'Authorization': `Bearer ${process.env.GATSBY_STRIPE_S_KEY}`
+            }
+        }).then(response => {
+            return response.json()
+        }).then(json => {
+
+            this.setState({
+                fetchedMetadata: json.data,
+            })
+             console.log(json.data);
+             if (this.state.fetchedMetadata.length > 0) {
+
+                this.setState({ loadingP: true });
             }
             return json;
         })
 
     }
+
     createSkeleton = () => {
         let table = []
 
@@ -73,16 +99,24 @@ const Skius = class extends React.Component {
         }
         return table
     }
+    
     render() {
         const props = this.props;
-        const { fetchedData } = this.state
-        return (<div>
-            <Grid style={conatinerStyles}>
-                {this.state.loading ? (
+        const { fetchedData,fetchedMetadata } = this.state
+
+
+        const getDescription = (idProd) => {
+
+            return fetchedMetadata.find(prod => (prod.id == idProd))
+
+        }
+        return (
+           <Grid style={conatinerStyles}>
+                {(this.state.loadingS && this.state.loadingP) ? (
                     fetchedData.map(sku =>
                         <Grid item key={sku.id} xs={12} sm={6} md={4} style={styGrid}>
-
-                            <SkuCard {...props} sku={sku} />
+                            
+                            <SkuCard {...props} sku={sku} product={getDescription(sku.product)}/>
 
                         </Grid>
                     )
@@ -90,8 +124,7 @@ const Skius = class extends React.Component {
                 ) : (
                         this.createSkeleton()
                     )}
-            </Grid>
-        </div>
+            </Grid> 
 
         )
     }

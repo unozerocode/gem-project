@@ -16,8 +16,8 @@ const Checkout = class extends React.Component {
     event.preventDefault()
     const { error } = await this.stripe.redirectToCheckout({
       items: this.props.cart,
-      successUrl: `https://${process.env.GATSBY_API_URL}/page-2/`,
-      cancelUrl: `https://${process.env.GATSBY_API_URL}/advanced/`,
+      successUrl: `https://twofishtravel.com/page-2/`,
+      cancelUrl: `https://twofishtravel.com/advanced/`,
     })
 
     if (error) {
