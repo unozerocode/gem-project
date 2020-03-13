@@ -1,11 +1,13 @@
 import React from "react"
 import Button from '@material-ui/core/Button';
 
+import ShoppingCart from '@material-ui/icons/ShoppingCart';
 
 const Checkout = class extends React.Component {
-  // Initialise Stripe.js with your publishable key.
-  // You can find your key in the Dashboard:
-  // https://dashboard.stripe.com/account/apikeys
+  constructor(props) {
+    super(props);
+
+}
   componentDidMount() {
     this.stripe = window.Stripe(process.env.GATSBY_STRIPE_P_KEY)
   }
@@ -13,9 +15,9 @@ const Checkout = class extends React.Component {
   async redirectToCheckout(event) {
     event.preventDefault()
     const { error } = await this.stripe.redirectToCheckout({
-      items: [{ sku: "sku_GgeLeWOYKm3wya", quantity: 1 }],
-      successUrl: `https://${process.env.GATSBY_API_URL}/page-2/`,
-      cancelUrl: `https://${process.env.GATSBY_API_URL}`,
+      items: [{ sku: this.props.sku, quantity: 1 }],
+      successUrl: `https://twofishtravel.com/success/`,
+      cancelUrl: `https://twofishtravel.com`
     })
 
     if (error) {
@@ -24,11 +26,11 @@ const Checkout = class extends React.Component {
   }
 
   render() {
+   
     return (
   
-       <Button variant="contained" color="primary" onClick={event => this.redirectToCheckout(event)}>
-       Buy Tour
-       <span className="material-icons">shopping_cart</span>
+       <Button size="large" color="primary" onClick={event => this.redirectToCheckout(event)}>
+       <ShoppingCart />
        </Button>
     )
   }

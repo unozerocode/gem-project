@@ -12,20 +12,12 @@ module.exports = {
         link: '/'
       },
       {
-        name: 'Page2',
-        link: '/page-2'
+        name: 'About Us',
+        link: '/about-us'
       },
       {
-        name: 'Advanced',
-        link: '/advanced'
-      },
-      {
-        name: 'Error',
-        link: '/404'
-      },
-      {
-        name: 'Productos',
-        link: '/skius'
+        name: 'Contact US',
+        link: '/contact-us'
       },
     ],
   },
@@ -63,14 +55,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-stripe",
-    {
-      resolve: `gatsby-source-stripe`,
-      options: {
-        objects: ["Sku"],
-        secretKey: process.env.GATSBY_STRIPE_S_KEY,
-        downloadFiles: true,
-      },
-    },
 
   ],
 }

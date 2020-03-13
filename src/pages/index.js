@@ -4,9 +4,16 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import Checkout from "../components/checkout"
 import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import Skius from './skius';
 import { useStaticQuery, graphql } from "gatsby"
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import { Link } from 'gatsby'
 
 
 const IndexPage = () => {
@@ -32,27 +39,34 @@ const IndexPage = () => {
             <div className="col-12 text-center">
               <h2 className="text-white">Enjoy Your Dream Vacation</h2>
               <p className="h6 text-white">Travel to the any corner of the world, without going around in circles.</p>
-
+              <Button variant="contained" color="secondary" style={{ marginTop: `3rem` }}>
+                Buy Tour
+       <span className="material-icons"> shopping_cart</span>
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      <Container component="section" maxWidth={false} className="section-50 section-md-bottom-50 bg-wild-wand">
-        <Container component="div" maxWidth="lg" >
+      {/* <Container component="section" maxWidth={false} className="section-50 section-md-bottom-50 bg-wild-wand">
+      <div className="container">
+          <div className="row justify-content-center">
+          <Skius />
+          </div>
+        </div>
+      </Container> */}
+       <Container component="section" className="section-50 section-md-bottom-50 bg-wild-wand">
+        <Container component="div"   >
           <Skius />
         </Container>
       </Container>
-      
+
       <Container component="section" maxWidth={false} className="section-50 section-md-top-50 bg-white">
 
         <div className="container">
           <div className="row justify-content-center">
-          <div className="col-lg-6 text-center">
-              <h1>Hi people</h1>
-              <p>Welcome to your new Gatsby site.</p>
-              <p>Now go build something great.</p>
-              <Checkout />
+            <div className="col-lg-6 text-center">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </div>
 
 
@@ -66,13 +80,20 @@ const IndexPage = () => {
         </div>
 
       </Container>
+
       <Container component="section" maxWidth={false} className="section-50 section-md-bottom-50 bg-wild-wand">
-      <div className="container">
+        <div className="container">
           <div className="row justify-content-between">
-            <div className="cell-md-10 cell-lg-8 text-center text-md-right">
-              <h2 className="text-bold">See Our Special Promo Offers</h2>
+            <div className="col-md-10 col-lg-8 text-center text-md-right">
+              <h2 className="col-12 text-center ">Get a custom tour</h2>
+              <h6 className="col-12 text-center ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h6>
             </div>
-            <div className="cell-lg-3 offset-top-30 offset-lg-top-0 text-lg-left"><a href="single-tour.html" className="btn btn-primary">Get Started</a></div>
+            <div className="col-lg-2 text-center d-flex align-items-center"><Link to="/page-2" style={{ textDecoration: `none` }}>
+               <Button variant="contained" color="secondary">
+                Make tour
+              </Button> 
+              
+            </Link></div>
           </div>
         </div>
       </Container>
