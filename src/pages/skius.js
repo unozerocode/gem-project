@@ -51,13 +51,22 @@ const Skius = class extends React.Component {
             this.setState({
                 fetchedData: json.data,
             })
-            console.log(json.data);
+            if (json.data == undefined) {
+                console.error("No data returned by Stripe API, check keys");
+            }
+            console.log("UZ getProducts /skus: " + JSON.stringify(json.data));
             if (this.state.fetchedData.length > 0) {
-
-                this.setState({ loadingS: true });
+                try {
+                  this.setState({ loadingS: true });
+                } catch (e) {
+                  console.log("UZ exception getProducts /skus: " + e)
+                }
             }
             return json;
+        }).catch ((err) => {
+            console.log("UZ getProducts Exception: " + err)
         })
+
         fetch(stripe_url + "/v1/products", {
             method: "GET",
             headers: {
@@ -74,12 +83,17 @@ const Skius = class extends React.Component {
             this.setState({
                 fetchedMetadata: json.data,
             })
-             console.log(json.data);
+             console.log("UZ getProducts /produts : " + JSON.stringify(json.data));
              if (this.state.fetchedMetadata.length > 0) {
-
-                this.setState({ loadingP: true });
+                try {
+                  this.setState({ loadingP: true });
+                } catch (e) {
+                  console.log("UZ setstate exception: " + e)
+                }
             }
             return json;
+        }).catch ((err) => {
+            console.log("UZ getProducts Exception: " + err)
         })
 
     }

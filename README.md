@@ -1,4 +1,12 @@
 
+[![GitHubCI](https://github.com/unozerocode/gem-project/workflows/Node%20CI/badge.svg)](https://github.com/unozerocode/gem-project/actions?query=workflow%3A%22Node+CI%22)
+
+## Deployments
+
+CloudRun
+Netlify
+Zeit
+
 ## 🚀 Quick start
 
 1.  **Clone project.**

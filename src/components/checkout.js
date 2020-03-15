@@ -14,6 +14,7 @@ const Checkout = class extends React.Component {
 
   async redirectToCheckout(event) {
     event.preventDefault()
+    //console.log(`UZ Initializing Stripe with key #{process.env.GATSBY_STRIPE_P_KEY}`)
     const { error } = await this.stripe.redirectToCheckout({
       items: [{ sku: this.props.sku, quantity: 1 }],
       successUrl: `https://twofishtravel.com/success/`,
@@ -21,7 +22,7 @@ const Checkout = class extends React.Component {
     })
 
     if (error) {
-      console.warn("Error:", error)
+      console.warn("UZ Error:", error)
     }
   }
 

@@ -74,3 +74,6 @@ yarn-error.log
 
 package-lock.json
 yarn.lock
+cypress/videos/
+cypress/screenshots/
+*.mp4
